@@ -14,6 +14,13 @@ get '/' do
 end
 
 get '/count' do
-  @number = 1
+  @number = Count.first.number
   erb :index
+end
+
+post '/plus' do
+  count = Count.first
+  count.number = count.number + 1
+  count.save
+  redirect '/count'
 end
