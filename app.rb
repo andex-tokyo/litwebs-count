@@ -14,5 +14,6 @@ get '/' do
 end
 
 get '/count' do
-  'カウントアプリ'
+  @number = 1
+  erb :index
 end
