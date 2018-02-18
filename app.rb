@@ -12,3 +12,7 @@ end
 get '/' do
   'こんばんは'
 end
+
+get '/count' do
+  'カウントアプリ'
+end
